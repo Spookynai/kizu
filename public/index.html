@@ -1,0 +1,130 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/0d391b41-a8bd-4502-b08c-04de19873d8c%2Ffavicon%20(1).ico?v=1576621322526"
+      type="icon"
+    />
+    <meta charset="utf-8" />
+    <meta name="description" content="A Simple Anime List" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kizuna 絆</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Kizuna PWA" />
+    <link rel="apple-touch-icon" href="/images/apple-icon-152x152.png" />
+    <meta name="theme-color" content="#2F3BA2" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/771216db-f4aa-4bae-85e5-b7477b7aa16e%2Ffavicon%20(1).ico?v=1574887520258"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active"><strong>KIZUNA</strong> <strong id="kiz">絆</strong></a>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <strong>Genres</strong>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <button onclick="buttonSearch('Action')" class="Genre">
+              Action
+            </button>
+            <button onclick="buttonSearch('Comedy')" class="Genre">
+              Comedy
+            </button>
+            <button onclick="buttonSearch('Drama')" class="Genre">Drama</button>
+            <button onclick="buttonSearch('Horror')" class="Genre">
+              Horror
+            </button>
+            <button onclick="buttonSearch('Mystery')" class="Genre">
+              Mystery
+            </button>
+            <button onclick="buttonSearch('Romance')" class="Genre">
+              Romance
+            </button>
+            <button onclick="buttonSearch('Sci-fi')" class="Genre">
+              Sci-fi
+            </button>
+            <button onclick="buttonSearch('Psychological')" class="Genre">
+              Psychological
+            </button>
+            <button onclick="buttonSearch('Adventure')" class="Genre">
+              Adventure
+            </button>
+            <button onclick="buttonSearch('Shounen')" class="Genre">
+              Shounen
+            </button>
+            <button onclick="buttonSearch('Ecchi')" class="Genre">Ecchi</button>
+          </div>
+        </div>
+      </div>
+      <span id="Genre2" onclick="openNav()"><strong>&#9776; Genres</strong></span>
+      <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+  <div class="overlay-content">
+    <button onclick="buttonSearch('Action')" class="Genre">
+              Action
+            </button>
+            <button onclick="buttonSearch('Comedy')" class="Genre">
+              Comedy
+            </button>
+            <button onclick="buttonSearch('Drama')" class="Genre">Drama</button>
+            <button onclick="buttonSearch('Horror')" class="Genre">
+              Horror
+            </button>
+            <button onclick="buttonSearch('Mystery')" class="Genre">
+              Mystery
+            </button>
+            <button onclick="buttonSearch('Romance')" class="Genre">
+              Romance
+            </button>
+            <button onclick="buttonSearch('Sci-fi')" class="Genre">
+              SciFi
+            </button>
+            <button onclick="buttonSearch('Psychological')" class="Genre">
+              Psychological
+            </button>
+            <button onclick="buttonSearch('Adventure')" class="Genre">
+              Adventure
+            </button>
+            <button onclick="buttonSearch('Shounen')" class="Genre">
+              Shounen
+            </button>
+            <button onclick="buttonSearch('Ecchi')" class="Genre">Ecchi</button>
+  </div>
+</div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          aria-label="text-input"
+          placeholder="Anime..."
+        />
+        <button id="search-button" aria-label="search-button">
+          <img
+            id="search-but"
+            src="https://cdn.glitch.com/0d391b41-a8bd-4502-b08c-04de19873d8c%2Fsearch.png?v=1575662259532"
+            alt="search button"
+          />
+        </button>
+      </div>
+      <button id="butInstall" aria-label="Install" hidden><strong>Install Kizuna</strong></button>
+    </div>
+
+    <div id="box-main"></div>
+
+    <!--grid-container-->
+    <script src="addserviceworker.js"></script>
+    <script src="client.js"></script>
+    <script src="install.js"></script>
+  </body>
+</html>
